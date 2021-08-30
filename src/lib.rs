@@ -15,7 +15,7 @@
 #![cfg_attr(feature = "simd_backend", feature(stdsimd))]
 
 // Refuse to compile if documentation is missing.
-#![deny(missing_docs)]
+// #![deny(missing_docs)]
 
 #![doc(html_logo_url = "https://doc.dalek.rs/assets/dalek-logo-clear.png")]
 #![doc(html_root_url = "https://docs.rs/curve25519-dalek/3.2.0")]
@@ -302,6 +302,9 @@ pub mod constants;
 
 // External (and internal) traits.
 pub mod traits;
+
+// Akk the lizard code is here, for now
+pub mod lizard;
 
 //------------------------------------------------------------------------
 // curve25519-dalek internal modules
