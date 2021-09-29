@@ -141,6 +141,7 @@
 
 use core::borrow::Borrow;
 use core::cmp::{Eq, PartialEq};
+use core::cmp::{Ord, PartialOrd};
 use core::fmt::Debug;
 use core::iter::{Product, Sum};
 use core::ops::Index;
@@ -192,7 +193,7 @@ type UnpackedScalar = backend::serial::u32::scalar::Scalar29;
 
 /// The `Scalar` struct holds an integer \\(s < 2\^{255} \\) which
 /// represents an element of \\(\mathbb Z / \ell\\).
-#[derive(Copy, Clone, Hash)]
+#[derive(Copy, Clone, Hash, Ord, PartialOrd)]
 pub struct Scalar {
     /// `bytes` is a little-endian byte encoding of an integer representing a scalar modulo the
     /// group order.
