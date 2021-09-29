@@ -437,7 +437,7 @@ impl<'de> Deserialize<'de> for CompressedRistretto {
 /// operations on `RistrettoPoint`s are exactly as fast as operations on
 /// `EdwardsPoint`s.
 ///
-#[derive(Copy, Clone, Hash)]
+#[derive(Copy, Clone, Hash, Ord, PartialOrd)]
 pub struct RistrettoPoint(pub(crate) EdwardsPoint);
 
 impl RistrettoPoint {

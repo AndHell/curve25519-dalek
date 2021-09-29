@@ -49,7 +49,7 @@ use zeroize::Zeroize;
 ///
 /// The backend-specific type `FieldElement2625` should not be used
 /// outside of the `curve25519_dalek::field` module.
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Hash, PartialOrd, Ord)]
 pub struct FieldElement2625(pub (crate) [u32; 10]);
 
 impl Debug for FieldElement2625 {
